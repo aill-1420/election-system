@@ -52,10 +52,10 @@ class CandidateController extends Controller
             'password' => bcrypt($request->input('password')),
             'phone_number'  => $request->input('phone'),
             'reason_on_nomination' => $request->input('description'),
-            'election_id'   => $request->input('election'),
             'image' => $fileName,
             'created_at' => now()
         ]);
+        $candidate->election()->attach($request->input('election'));
         return redirect()->to(route('candidate.index'))->with(['success' => 'added candidate successfully']);
 
     }
@@ -114,7 +114,7 @@ class CandidateController extends Controller
             'email' => $request->input('email'),
             'password' => bcrypt($request->input('password')),
             'phone_number'  => $request->input('phone'),
-            'reason_on_nomination' => $request->input('description'),
+            'reason_of_nomination' => $request->input('description'),
             'election_id'   => $request->input('election'),
             'image' => $fileName ? $fileName : $candidate->image,
         ]);
