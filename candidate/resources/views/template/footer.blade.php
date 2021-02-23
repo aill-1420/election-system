@@ -3,7 +3,7 @@
         <div class="row">
             <div class="col-md-12">
                 <div class="copyright">
-                    <p>Design By <a href="https://www.twitter.com/AbdSufyani">@AbdSufyani</a></p>
+                    <p>Online Election System Design By <a href="https://www.twitter.com/AbdSufyani">@AbdSufyani</a></p>
                 </div>
             </div>
         </div>

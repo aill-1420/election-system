@@ -10,10 +10,10 @@
         <div class="menu-sidebar2__content js-scrollbar1">
             <div class="account2">
                 <div class="image img-cir img-120">
-                    <img src="{{asset('front-end')}}/images/profile.jpg" alt="John Doe"/>
+                    <img src="{{asset('front-end')}}/images/profile.jpg" alt="image"/>
                 </div>
                 <h4 class="name">{{auth()->user()->name}}</h4>
-                <a href="@if(auth('admin')->user()) {{route('admin.logout')}} @elseif(auth('candidate')->user()) {{route('candidate.logout')}} @endif">Sign out</a>
+                <a href="@if(auth('admin')->user()) {{route('admin.logout')}} @elseif(auth('candidate')->user()) {{route('candidate.logout')}} @else {{route('visitor.logout')}} @endif">Sign out</a>
             </div>
             @auth('admin')
                 <nav class="navbar-sidebar2">

@@ -22,6 +22,12 @@ class RedirectIfAuthenticated
             if($guard == 'admin') {
                 return redirect()->to(route('admin.dashboard'));
             }
+            elseif($guard == 'candidate') {
+                return redirect()->to(route('candidate.dashboard'));
+            }
+            elseif($guard == 'visitor') {
+                return redirect()->to(route('visitor.dashboard'));
+            }
             return redirect(RouteServiceProvider::HOME);
         }
 

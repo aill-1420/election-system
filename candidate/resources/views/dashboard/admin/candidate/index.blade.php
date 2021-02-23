@@ -33,7 +33,11 @@
                                 <td>{{$candidate->name}}</td>
                                 <td>{{$candidate->email}}</td>
                                 <td>{{$candidate->phone_number}}</td>
-                                <td>{{$candidate->election->name}}</td>
+                                <td>
+                                    @foreach($candidate['election'] as $can)
+                                        {{$can->name}} |
+                                    @endforeach
+                                </td>
                                 <td>{{$candidate->created_at}}</td>
                                 <td>
                                     <a href="{{route('candidate.edit' , $candidate->id)}}"

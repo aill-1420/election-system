@@ -21,6 +21,7 @@ Route::group(['middleware' => 'guest:candidate'] , function() {
     // candidate Register
     Route::get('candidate_register' , 'authController@candidateRegisterView')->name('candidate.register.view');
     Route::post('candidate_register' , 'authController@candidateRegister')->name('candidate.register');
+
 });
 
 Route::group(['middleware' => 'auth:candidate'] , function() {
@@ -29,5 +30,7 @@ Route::group(['middleware' => 'auth:candidate'] , function() {
     // ---------------- //
     Route::get('my_election' , 'CandidateControllerDashboard@myElection')->name('my.election');
     Route::get('all_election' , 'CandidateControllerDashboard@allElection')->name('all.election');
+    Route::get('nomination/{id}' , 'CandidateControllerDashboard@nomination')->name('nomination');
+    Route::post('nomination' , 'CandidateControllerDashboard@nominationPost')->name('nomination.post');
 });
 

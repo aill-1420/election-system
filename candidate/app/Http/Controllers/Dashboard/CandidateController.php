@@ -17,7 +17,7 @@ class CandidateController extends Controller
      */
     public function index()
     {
-        $candidates = Candidate::orderBy('id' , 'DESC')->paginate($this->paginate);
+        $candidates = Candidate::with('election')->orderBy('id' , 'DESC')->paginate($this->paginate);
         return view('dashboard.admin.candidate.index' , compact('candidates'));
     }
 
@@ -51,7 +51,7 @@ class CandidateController extends Controller
             'email' => $request->input('email'),
             'password' => bcrypt($request->input('password')),
             'phone_number'  => $request->input('phone'),
-            'reason_on_nomination' => $request->input('description'),
+            'reason_of_nomination' => $request->input('description'),
             'image' => $fileName,
             'created_at' => now()
         ]);
@@ -98,7 +98,6 @@ class CandidateController extends Controller
             'email'       => 'required|string|max:200|email',
             'description' => 'required|string',
             'image'       => 'nullable|mimes:jpg,png,jpeg',
-            'election'    => 'required|integer|exists:elections,id'
         ]);
         $candidate = Candidate::findOrFail($id);
         $fileName = '';

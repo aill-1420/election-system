@@ -11,14 +11,13 @@ class Candidate extends Authenticatable
     public $timestamps = false;
 
 
-
-
-
-
-
-
     // relation pivot election
     public function election() {
-        return $this->belongsToMany(Election::class , 'election_candidate');
+        return $this->belongsToMany(Election::class , 'election_candidate' , 'candidate_id' , 'election_id');
+    }
+
+    // relation votes
+    public function votes() {
+        return $this->hasMany(Vote::class , 'candidate_id');
     }
 }

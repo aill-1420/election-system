@@ -42,17 +42,17 @@
                                 </a>
                             </div>
                         </div>
-                        <div class="col-md-6 col-lg-3">
-                            <div class="statistic__item">
-                                <a href="{{route('votes.index')}}">
-                                    <h2 class="number">{{\App\Models\Vote::count()}}</h2>
-                                    <span class="desc">All Votes</span>
-                                    <div class="icon">
-                                        <i class="fa fa-certificate" aria-hidden="true"></i>
-                                    </div>
-                                </a>
-                            </div>
-                        </div>
+{{--                        <div class="col-md-6 col-lg-3">--}}
+{{--                            <div class="statistic__item">--}}
+{{--                                <a href="{{route('votes.index')}}">--}}
+{{--                                    <h2 class="number">{{\App\Models\Vote::count()}}</h2>--}}
+{{--                                    <span class="desc">All Votes</span>--}}
+{{--                                    <div class="icon">--}}
+{{--                                        <i class="fa fa-certificate" aria-hidden="true"></i>--}}
+{{--                                    </div>--}}
+{{--                                </a>--}}
+{{--                            </div>--}}
+{{--                        </div>--}}
 
                         {{--                            <div class="col-md-6 col-lg-3">--}}
                         {{--                                <div class="statistic__item">--}}

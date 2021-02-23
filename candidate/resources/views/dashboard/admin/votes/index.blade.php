@@ -1,99 +1,189 @@
 @extends('template.master')
-@section('title' , 'visitor')
+@section('title' , 'Election')
 @section('content')
-    <!-- MAIN CONTENT-->
-    <div class="main-content">
-        <div class="section__content section__content--p30">
-            <div class="container-fluid">
-                <h2 class="text-center mb-5">All Votes</h2>
-                <div class="row">
-                    <div class="col-lg-12">
-                        <div class="table-responsive table--no-card m-b-30">
-                            <table class="table table-borderless table-striped table-earning">
-                                <thead>
-                                <tr>
-                                    <th>id</th>
-                                    <th>visitor</th>
-                                    <th>candidate</th>
-                                    <th>election</th>
-                                    <th>Voted added at</th>
-                                    <th>Action</th>
-                                </tr>
-                                </thead>
-                                <tbody>
-                                <tr>
-                                    <td>1</td>
-                                    <td>aysha</td>
-                                    <td>ahmed</td>
-                                    <td>manager</td>
-                                    <td>23/34/2333</td>
-                                    <td>
-                                        <a href="{{route('visitor.edit' , 1)}}" class="btn btn-sm btn-primary">Edit</a>
-                                        <form action="{{route('visitor.destroy' , 1)}}" class="d-inline">
-                                            <button class="btn btn-sm btn-danger">Delete</button>
-                                        </form>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>1</td>
-                                    <td>aysha</td>
-                                    <td>3333333</td>
-                                    <td>test@gmail.com</td>
-                                    <td>23/34/2333</td>
-                                    <td>
-                                        <a href="{{route('visitor.edit' , 1)}}" class="btn btn-sm btn-primary">Edit</a>
-                                        <form action="{{route('visitor.destroy' , 1)}}" class="d-inline">
-                                            <button class="btn btn-sm btn-danger">Delete</button>
-                                        </form>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>1</td>
-                                    <td>aysha</td>
-                                    <td>3333333</td>
-                                    <td>test@gmail.com</td>
-                                    <td>23/34/2333</td>
-                                    <td>
-                                        <a href="{{route('visitor.edit' , 1)}}" class="btn btn-sm btn-primary">Edit</a>
-                                        <form action="{{route('visitor.destroy' , 1)}}" class="d-inline">
-                                            <button class="btn btn-sm btn-danger">Delete</button>
-                                        </form>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>1</td>
-                                    <td>aysha</td>
-                                    <td>3333333</td>
-                                    <td>test@gmail.com</td>
-                                    <td>23/34/2333</td>
-                                    <td>
-                                        <a href="{{route('visitor.edit' , 1)}}" class="btn btn-sm btn-primary">Edit</a>
-                                        <form action="{{route('visitor.destroy' , 1)}}" class="d-inline">
-                                            <button class="btn btn-sm btn-danger">Delete</button>
-                                        </form>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>1</td>
-                                    <td>aysha</td>
-                                    <td>3333333</td>
-                                    <td>test@gmail.com</td>
-                                    <td>23/34/2333</td>
-                                    <td>
-                                        <a href="{{route('visitor.edit' , 1)}}" class="btn btn-sm btn-primary">Edit</a>
-                                        <form action="{{route('visitor.destroy' , 1)}}" class="d-inline">
-                                            <button class="btn btn-sm btn-danger">Delete</button>
-                                        </form>
-                                    </td>
-                                </tr>
+    <body class="animsition">
+    <div class="page-wrapper">
+        <!-- MENU SIDEBAR-->
+        <aside class="menu-sidebar2">
+            <div class="logo">
+                <a href="#">
+                    <h4 class="text-light">Online Election System</h4>
+                </a>
+            </div>
+            <div class="menu-sidebar2__content js-scrollbar1">
+                <div class="account2">
+                    <div class="image img-cir img-120">
+                        <img src="{{asset('front-end')}}/images/profile.jpg" alt="John Doe"/>
+                    </div>
+                    <h4 class="name">{{auth()->user()->name ?? 'Admin'}}</h4>
+                    <a href="{{route('admin.logout')}}">Sign out</a>
+                </div>
+                <nav class="navbar-sidebar2">
+                    <ul class="list-unstyled navbar__list">
+                        <li class="active has-sub">
+                            <a class="js-arrow" href="{{route('admin.dashboard')}}">
+                                <i class="fas fa-tachometer-alt"></i>Dashboard
+                            </a>
+                        </li>
+                    </ul>
+                    <ul class="list-unstyled navbar__list">
+                        <li class="active has-sub">
+                            <a class="js-arrow" href="{{route('visitor.index')}}">
+                                <i class="zmdi zmdi-account-o"></i>visitors
+                            </a>
+                        </li>
+                    </ul>
+                    <ul class="list-unstyled navbar__list">
+                        <li class="active has-sub">
+                            <a class="js-arrow" href="{{route('candidate.index')}}">
+                                <i class="fa fa-tags" aria-hidden="true"></i>
+                                Candidate
+                            </a>
+                        </li>
+                    </ul>
+                    <ul class="list-unstyled navbar__list">
+                        <li class="active has-sub">
+                            <a class="js-arrow" href="{{route('election.index')}}">
+                                <i class="zmdi zmdi-calendar-note"></i>
+                                Election
+                            </a>
+                        </li>
+                    </ul>
+                    {{--                    <ul class="list-unstyled navbar__list">--}}
+                    {{--                        <li class="active has-sub">--}}
+                    {{--                            <a class="js-arrow" href="{{route('votes.index')}}">--}}
+                    {{--                                <i class="fa fa-certificate" aria-hidden="true"></i>--}}
+                    {{--                                Votes--}}
+                    {{--                            </a>--}}
+                    {{--                        </li>--}}
+                    {{--                    </ul>--}}
+                    {{--                    <ul class="list-unstyled navbar__list">--}}
+                    {{--                        <li class="active has-sub">--}}
+                    {{--                            <a class="js-arrow" href="{{route('admin.index')}}">--}}
+                    {{--                                <i class="zmdi zmdi-account-o"></i>Admins--}}
+                    {{--                            </a>--}}
+                    {{--                        </li>--}}
+                    {{--                    </ul>--}}
+                </nav>
+            </div>
+        </aside>
+        <!-- END MENU SIDEBAR-->
 
-                                </tbody>
-                            </table>
+        <!-- PAGE CONTAINER-->
+        <div class="page-container2">
+            <!-- HEADER DESKTOP-->
+            <header class="header-desktop2">
+                <div class="section__content section__content--p30">
+                    <div class="container-fluid">
+                        <div class="header-wrap2">
+                            <div class="logo d-block d-lg-none">
+                                <a href="#">
+                                    <img src="images/icon/logo-white.png" alt="CoolAdmin"/>
+                                </a>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </header>
+            <aside class="menu-sidebar2 js-right-sidebar d-block d-lg-none">
+                <div class="logo">
+                    <a href="#">
+                        <img src="images/icon/logo-white.png" alt="Cool Admin"/>
+                    </a>
+                </div>
+                <div class="menu-sidebar2__content js-scrollbar2">
+                    <div class="account2">
+                        <div class="image img-cir img-120">
+                            <img src="images/icon/avatar-big-01.jpg" alt="John Doe"/>
+                        </div>
+                        <h4 class="name">john doe</h4>
+                        <a href="#">Sign out</a>
+                    </div>
+                    <nav class="navbar-sidebar2">
+                        <ul class="list-unstyled navbar__list">
+                            <li class="active has-sub">
+                                <a class="js-arrow" href="#">
+                                    <i class="fas fa-tachometer-alt"></i>Dashboard
+                                    <span class="arrow">
+                                        <i class="fas fa-angle-down"></i>
+                                    </span>
+                                </a>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+            </aside>
+            <!-- END HEADER DESKTOP-->
+
+            <!-- BREADCRUMB-->
+            <section class="au-breadcrumb m-t-75">
+                <div class="section__content section__content--p30">
+                    <div class="container-fluid">
+                        <div class="row">
+                            <div class="col-md-12">
+                                <div class="au-breadcrumb-content">
+                                    <div class="au-breadcrumb-left">
+                                        <span class="au-breadcrumb-span">You are here:</span>
+                                        <ul class="list-unstyled list-inline au-breadcrumb__list">
+                                            <li class="list-inline-item active">
+                                                <a href="#">Home</a>
+                                            </li>
+                                            <li class="list-inline-item seprate">
+                                                <span>/</span>
+                                            </li>
+                                            <li class="list-inline-item">Dashboard</li>
+                                        </ul>
+                                    </div>
+                                    {{--                                    <button class="au-btn au-btn-icon au-btn--blue2">--}}
+                                    {{--                                        <i class="zmdi zmdi-plus"></i>add election</button>--}}
+                                    {{--                                    <button class="au-btn au-btn-icon au-btn--green">--}}
+                                    {{--                                        <i class="zmdi zmdi-plus"></i>add candidate</button>--}}
+                                    {{--                                    <button class="au-btn au-btn-icon au-btn--blue2">--}}
+                                    {{--                                        <i class="zmdi zmdi-plus"></i>add candidate to election</button>--}}
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- END BREADCRUMB-->
+
+            <!-- MAIN CONTENT-->
+            <div class="main-content">
+                <div class="section__content section__content--p30">
+                    <div class="container-fluid">
+                        <h2 class="text-center mb-5">All Votes</h2>
+                        <br>
+                        <div class="row">
+                            <div class="col-lg-12">
+                                @include('dashboard.admin.alert.success')
+                                <div class="table-responsive table--no-card m-b-30">
+                                    <table class="table table-borderless table-striped table-earning">
+                                        <thead>
+                                        <tr>
+                                            <th>id</th>
+                                            <th>All votes</th>
+                                            <th>election name</th>
+                                            <th>created at</th>
+                                        </tr>
+                                        </thead>
+                                        <tbody>
+                                        @foreach($votes as $vote)
+                                            <td>{{$vote->id}}</td>
+                                            <td><a href="{{route('election.votes' , $vote->id)}}">{{$vote->election()->count()}}</a></td>
+                                            <td>{{$vote->election->name}}</td>
+                                            <td>{{$vote->created_at}}</td>
+
+                                            </tr>
+                                        @endforeach
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                            {{$votes->links()}}
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
-    </div>
-
 @endsection

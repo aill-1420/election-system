@@ -21,13 +21,15 @@ class authController extends Controller
 
     // logout system
     public function logout() {
-        if(auth('admin') == 'admin') {
-            auth('admin')->logout();
-            return redirect()->to(route('admin.login.view'));
-        } elseif(auth('candidate')) {
-            auth('candidate')->logout();
-            return redirect()->to(route('admin.login.view'));
-        }
+        auth('admin')->logout();
+        return redirect()->to(route('admin.login.view'));
 
+//        if(auth('admin')->user() == 'admin') {
+//            auth('admin')->logout();
+//            return redirect()->to(route('admin.login.view'));
+//        } elseif(auth('candidate')->user() == 'candidate') {
+//            auth('candidate')->logout();
+//            return redirect()->to(route('admin.login.view'));
+//        }
     }
 }

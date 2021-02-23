@@ -84,32 +84,32 @@
                                     </div>
                                     <div class="row form-group">
                                         <div class="col-12 col-md-12">
-                                            <textarea id="textarea-input" name="description" rows="9" placeholder="Reason of notation..." class="form-control">{{$candidate->reason_on_nomination}}</textarea>
+                                            <textarea id="textarea-input" name="description" rows="9" placeholder="Reason of notation..." class="form-control">{{$candidate->reason_of_nomination}}</textarea>
                                             @error('description')
                                             <span class="help-block" data-valmsg-for="cc-exp" data-valmsg-replace="true">{{$message}}</span>
                                             @enderror
                                         </div>
                                     </div>
-                                    <div class="row form-group">
-                                        <div class="col col-md-12">
-                                            <label for="election" class=" form-control-label">Select the election</label>
-                                        </div>
-                                    </div>
-                                        <div class="row form-group">
-                                            <div class="col-12 col-md-12">
-                                                <select name="election" id="election" class="form-control">
+{{--                                    <div class="row form-group">--}}
+{{--                                        <div class="col col-md-12">--}}
+{{--                                            <label for="election" class=" form-control-label">Select the election</label>--}}
+{{--                                        </div>--}}
+{{--                                    </div>--}}
+{{--                                        <div class="row form-group">--}}
+{{--                                            <div class="col-12 col-md-12">--}}
+{{--                                                <select name="election" id="election" class="form-control">--}}
 {{--                                                    @foreach(\App\Models\Election::orderBy('id' , 'DESC')->select('id' , 'name')->get() as $election)--}}
-                                                        <option value="{{$candidate->election->id}}">{{$candidate->election->name}}</option>
+{{--                                                        <option value="{{$candidate->election->id}}">{{$candidate->election->name}}</option>--}}
 {{--                                                    @endforeach--}}
-                                                </select>
-                                            </div>
-                                        </div>
-                                    @error('election')
-                                    <span class="help-block" data-valmsg-for="cc-exp" data-valmsg-replace="true">{{$message}}</span>
-                                    @enderror
-                                    <div>
+{{--                                                </select>--}}
+{{--                                            </div>--}}
+{{--                                        </div>--}}
+{{--                                    @error('election')--}}
+{{--                                    <span class="help-block" data-valmsg-for="cc-exp" data-valmsg-replace="true">{{$message}}</span>--}}
+{{--                                    @enderror--}}
+{{--                                    <div>--}}
                                         <button id="payment-button" type="submit" class="btn btn-lg btn-info btn-block">
-                                            <span id="payment-button-amount">Create new candidate</span>
+                                            <span id="payment-button-amount">update candidate</span>
                                         </button>
                                     </div>
                                 </form>

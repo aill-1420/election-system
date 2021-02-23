@@ -17,6 +17,7 @@ class RouteServiceProvider extends ServiceProvider
     protected $namespace = 'App\Http\Controllers';
     protected $dashboard = 'App\Http\Controllers\Dashboard';
     protected $candidate = 'App\Http\Controllers\Candidate';
+    protected $visitor   = 'App\Http\Controllers\Visitor';
 
     /**
      * The path to the "home" route for your application.
@@ -50,7 +51,10 @@ class RouteServiceProvider extends ServiceProvider
 
         $this->mapAdminRoutes();
 
+        $this->mapVisitorRoutes();
+
         $this->mapCandidateRoutes();
+
 
         //
     }
@@ -97,5 +101,12 @@ class RouteServiceProvider extends ServiceProvider
             ->middleware('web')
             ->namespace($this->candidate)
             ->group(base_path('routes/candidate.php'));
+    }
+
+    protected function mapVisitorRoutes() {
+        Route::prefix('visitor')
+            ->middleware('web')
+            ->namespace($this->visitor)
+            ->group(base_path('routes/visitor.php'));
     }
 }

@@ -1,7 +1,31 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="28e9446d-48f5-4db6-a0ee-b6f416634ee7" name="Default Changelist" comment="" />
+    <list default="true" id="28e9446d-48f5-4db6-a0ee-b6f416634ee7" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Candidate/CandidateControllerDashboard.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Candidate/CandidateControllerDashboard.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Dashboard/CandidateController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Dashboard/CandidateController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Dashboard/VotesController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Dashboard/VotesController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Dashboard/authController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Dashboard/authController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Middleware/RedirectIfAuthenticated.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Middleware/RedirectIfAuthenticated.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Models/Candidate.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Candidate.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Models/visitors.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/visitors.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Providers/RouteServiceProvider.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Providers/RouteServiceProvider.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/auth.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/auth.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/filesystems.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/filesystems.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/dashboard/admin/candidate/edit.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/dashboard/admin/candidate/edit.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/dashboard/admin/candidate/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/dashboard/admin/candidate/index.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/dashboard/admin/election/create.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/dashboard/admin/election/create.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/dashboard/admin/election/edit.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/dashboard/admin/election/edit.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/dashboard/admin/election/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/dashboard/admin/election/index.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/dashboard/admin/votes/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/dashboard/admin/votes/index.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/site/candidate/dashboard.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/site/candidate/dashboard.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/site/candidate/election/all-election.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/site/candidate/election/all-election.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/site/candidate/election/my-election.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/site/candidate/election/my-election.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/template/footer.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/template/footer.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/template/navbar.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/template/navbar.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/candidate.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/candidate.php" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -127,24 +151,24 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../eCommerce-Laravel" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/resources/views/site/visitor/auth" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\xampp\htdocs\candidate\resources\views\site\visitor\auth" />
       <recent name="C:\xampp\htdocs\candidate\resources\views\dashboard\admin\election" />
       <recent name="C:\xampp\htdocs\candidate\resources\views\template\electionsss" />
       <recent name="C:\xampp\htdocs\candidate\resources\views\dashboard\admin\candidate" />
       <recent name="C:\xampp\htdocs\candidate\resources\views\dashboard\admin\visitor" />
-      <recent name="C:\xampp\htdocs\candidate\resources\views\dashboard\admin" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\xampp\htdocs\candidate\resources\views\site\visitor\auth" />
+      <recent name="C:\xampp\htdocs\candidate\resources\views\site" />
       <recent name="C:\xampp\htdocs\candidate\resources\views\site\candidate\auth" />
       <recent name="C:\xampp\htdocs\candidate\resources\views\site\candidate" />
       <recent name="C:\xampp\htdocs\candidate\resources\views" />
-      <recent name="C:\xampp\htdocs\candidate\resources\views\dashboard\site" />
-      <recent name="C:\xampp\htdocs\candidate\resources\views\dashboard\admin" />
     </key>
   </component>
   <component name="RunManager">
@@ -168,7 +192,10 @@
       <workItem from="1613902694978" duration="7422000" />
       <workItem from="1613910586219" duration="3883000" />
       <workItem from="1613931198387" duration="10838000" />
-      <workItem from="1613963874657" duration="16503000" />
+      <workItem from="1613963874657" duration="17451000" />
+      <workItem from="1613994798055" duration="20851000" />
+      <workItem from="1614028259057" duration="6361000" />
+      <workItem from="1614051557327" duration="2413000" />
     </task>
     <servers />
   </component>
@@ -193,6 +220,15 @@
         <line-breakpoint enabled="true" type="php">
           <url>file://$PROJECT_DIR$/app/Http/Middleware/RedirectIfAuthenticated.php</url>
           <option name="timeStamp" value="1" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="php-line-method">
+          <url>file://$PROJECT_DIR$/app/Http/Controllers/Candidate/CandidateControllerDashboard.php</url>
+          <line>25</line>
+          <properties>
+            <option name="className" value="\App\Http\Controllers\Candidate\CandidateControllerDashboard" />
+            <option name="methodName" value="allElection" />
+          </properties>
+          <option name="timeStamp" value="2" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
