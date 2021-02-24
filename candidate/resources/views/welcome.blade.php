@@ -8,6 +8,7 @@
 
         <!-- Fonts -->
         <link href="https://fonts.googleapis.com/css?family=Nunito:200,600" rel="stylesheet">
+        <link rel="stylesheet" href="{{asset('front-end')}}/vendor/bootstrap-4.1/bootstrap.min.css" media="all">
 
         <!-- Styles -->
         <style>
@@ -49,10 +50,10 @@
             }
 
             .links > a {
-                color: #636b6f;
-                padding: 0 25px;
-                font-size: 13px;
-                font-weight: 600;
+                /*color: #636b6f;*/
+                /*padding: 0 25px;*/
+                /*font-size: 13px;*/
+                /*font-weight: 600;*/
                 letter-spacing: .1rem;
                 text-decoration: none;
                 text-transform: uppercase;
@@ -81,18 +82,12 @@
 
             <div class="content">
                 <div class="title m-b-md">
-                    Laravel
+                    Welcome to <br> Online Election System
                 </div>
 
                 <div class="links">
-                    <a href="https://laravel.com/docs">Docs</a>
-                    <a href="https://laracasts.com">Laracasts</a>
-                    <a href="https://laravel-news.com">News</a>
-                    <a href="https://blog.laravel.com">Blog</a>
-                    <a href="https://nova.laravel.com">Nova</a>
-                    <a href="https://forge.laravel.com">Forge</a>
-                    <a href="https://vapor.laravel.com">Vapor</a>
-                    <a href="https://github.com/laravel/laravel">GitHub</a>
+                    <a href="{{route('candidate.login.view')}}" class="btn btn-primary px-5 py-2 w-25">Candidate</a>
+                    <a href="{{route('login.visitor.view')}}" class="btn btn-success px-5 py-2 w-25" >Visitor</a>
                 </div>
             </div>
         </div>
