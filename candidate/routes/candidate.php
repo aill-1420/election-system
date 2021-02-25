@@ -27,6 +27,10 @@ Route::group(['middleware' => 'guest:candidate'] , function() {
 Route::group(['middleware' => 'auth:candidate'] , function() {
     Route::get('logout' , 'authController@logout')->name('candidate.logout');
     Route::get('dashboard' , 'CandidateControllerDashboard@dashboard')->name('candidate.dashboard');
+
+    // edit account
+    Route::get('edit' , 'EditCandidateController@editAccountView')->name('edit.candidate.view');
+    Route::post('edit' , 'EditCandidateController@editAccount')->name('update.candidate.account');
     // ---------------- //
     Route::get('my_election' , 'CandidateControllerDashboard@myElection')->name('my.election');
     Route::get('all_election' , 'CandidateControllerDashboard@allElection')->name('all.election');

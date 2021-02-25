@@ -24,6 +24,10 @@ Route::group(['middleware' => 'auth:admin'] , function() {
     Route::get('logout' , 'authController@logout')->name('admin.logout');
     Route::get('dashboard' , 'DashboardController@index')->name('admin.dashboard');
     ########
+    // edit account
+    Route::get('edit' , 'EditAdminController@editAccountView')->name('edit.admin.view');
+    Route::post('edit' , 'EditAdminController@editAccount')->name('update.admin.account');
+    // ---------------
     Route::resource('visitor' , 'VisitorController');
     #Route::get('register' , 'VisitorController@registerVisitor')->name('visitor.register');
     ########

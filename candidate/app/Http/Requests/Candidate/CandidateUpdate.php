@@ -4,7 +4,7 @@ namespace App\Http\Requests\Candidate;
 
 use Illuminate\Foundation\Http\FormRequest;
 
-class CandidateRegister extends FormRequest
+class CandidateUpdate extends FormRequest
 {
     /**
      * Determine if the user is authorized to make this request.
@@ -27,11 +27,10 @@ class CandidateRegister extends FormRequest
             'name'        => 'required|string|max:200',
             'username'    => 'required|string|max:200',
             'email'       => 'required|string|max:200|email',
-            'password'    => 'required|string|max:200',
+            'password'    => 'nullable|string|max:200',
             'description' => 'required|string',
             'phone'       => 'required',
-            'image'       => 'required|mimes:jpg,png,jpeg',
-            'election'    => 'required|integer|exists:elections,id'
+            'image'       => 'nullable|mimes:jpg,png,jpeg',
         ];
     }
 }

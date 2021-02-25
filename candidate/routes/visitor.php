@@ -19,6 +19,9 @@ Route::group(['middleware' => 'guest:visitor'] , function() {
 Route::group(['middleware' => 'auth:visitor'] , function() {
    Route::get('logout' , 'authVisitorController@logout')->name('visitor.logout');
    Route::get('dashboard' , 'DashboardVisitorController@dashboard')->name('visitor.dashboard');
+   // edit account
+    Route::get('edit' , 'EditVisitorController@editAccountView')->name('edit.visitor.view');
+    Route::post('edit' , 'EditVisitorController@editAccount')->name('update.visitor.account');
    // --------------------------- //
    Route::get('all_candidate/{id}' , 'DashboardVisitorController@nomination')->name('all_candidate');
    Route::get('nomination_candidate/{id}/election/{election}' , 'DashboardVisitorController@nominationToCandidate')->name('nomination_candidate');

@@ -26,42 +26,47 @@
                     </ul>
                     <ul class="list-unstyled navbar__list">
                         <li class="active has-sub">
-                            <a class="js-arrow" href="{{route('visitor.index')}}">
-                                <i class="zmdi zmdi-account-o"></i>visitors
+                            <a class="js-arrow" href="{{route('edit.admin.view')}}">
+                                <i class="zmdi zmdi-account-o"></i>Edit Account
+                            </a>
+                        </li>
+                    </ul>
+                </nav>
+            @endauth
+            @auth('visitor')
+                <nav class="navbar-sidebar2">
+                    <ul class="list-unstyled navbar__list">
+                        <li class="active has-sub">
+                            <a class="js-arrow" href="{{route('visitor.dashboard')}}">
+                                <i class="fas fa-tachometer-alt"></i>Dashboard
                             </a>
                         </li>
                     </ul>
                     <ul class="list-unstyled navbar__list">
                         <li class="active has-sub">
-                            <a class="js-arrow" href="{{route('candidate.index')}}">
-                                <i class="fa fa-tags" aria-hidden="true"></i>
-                                Candidate
+                            <a class="js-arrow" href="{{route('edit.visitor.view')}}">
+                                <i class="fas fa-tachometer-alt"></i>Edit Account
+                            </a>
+                        </li>
+                    </ul>
+                </nav>
+            @endauth
+            @auth('candidate')
+                <nav class="navbar-sidebar2">
+                    <ul class="list-unstyled navbar__list">
+                        <li class="active has-sub">
+                            <a class="js-arrow" href="{{route('candidate.register.view')}}">
+                                <i class="fas fa-tachometer-alt"></i>Dashboard
                             </a>
                         </li>
                     </ul>
                     <ul class="list-unstyled navbar__list">
                         <li class="active has-sub">
-                            <a class="js-arrow" href="{{route('election.index')}}">
-                                <i class="zmdi zmdi-calendar-note"></i>
-                                Election
+                            <a class="js-arrow" href="{{route('edit.candidate.view')}}">
+                                <i class="fas fa-tachometer-alt"></i>Edit Account
                             </a>
                         </li>
                     </ul>
-                    {{--                <ul class="list-unstyled navbar__list">--}}
-                    {{--                    <li class="active has-sub">--}}
-                    {{--                        <a class="js-arrow" href="{{route('votes.index')}}">--}}
-                    {{--                            <i class="fa fa-certificate" aria-hidden="true"></i>--}}
-                    {{--                            Votes--}}
-                    {{--                        </a>--}}
-                    {{--                    </li>--}}
-                    {{--                </ul>--}}
-                    {{--                <ul class="list-unstyled navbar__list">--}}
-                    {{--                    <li class="active has-sub">--}}
-                    {{--                        <a class="js-arrow" href="{{route('admin.index')}}">--}}
-                    {{--                            <i class="zmdi zmdi-account-o"></i>Admins--}}
-                    {{--                        </a>--}}
-                    {{--                    </li>--}}
-                    {{--                </ul>--}}
                 </nav>
             @endauth
         </div>
