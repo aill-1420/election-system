@@ -3,12 +3,9 @@
   <component name="ChangeListManager">
     <list default="true" id="28e9446d-48f5-4db6-a0ee-b6f416634ee7" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Requests/Candidate/CandidateRegister.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Requests/Candidate/CandidateRegister.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2014_10_12_000000_create_users_table.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/template/navbar.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/template/navbar.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/admin.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/admin.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/candidate.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/candidate.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/visitor.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/visitor.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Dashboard/VotesController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Dashboard/VotesController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Models/Election.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Election.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/dashboard/admin/votes/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/dashboard/admin/votes/index.blade.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -135,7 +132,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/resources/views/dashboard/admin" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
@@ -186,7 +183,9 @@
       <workItem from="1614191256563" duration="4032000" />
       <workItem from="1614224232454" duration="2326000" />
       <workItem from="1614248828813" duration="599000" />
-      <workItem from="1614254586210" duration="2205000" />
+      <workItem from="1614254586210" duration="5561000" />
+      <workItem from="1614345472121" duration="38000" />
+      <workItem from="1614429495550" duration="1889000" />
     </task>
     <servers />
   </component>

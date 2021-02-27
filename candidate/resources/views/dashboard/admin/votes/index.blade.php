@@ -171,17 +171,18 @@
                                         <tbody>
                                         @foreach($votes as $vote)
                                             <td>{{$vote->id}}</td>
-                                            <td><a href="{{route('election.votes' , $vote->id)}}">{{$vote->election()->count()}}</a></td>
+                                            <td><a href="{{route('election.votes' , $vote->id)}}">
+                                                    {{$vote->election->count()}}
+                                                </a></td>
                                             <td>{{$vote->election->name}}</td>
                                             <td>{{$vote->created_at}}</td>
-
                                             </tr>
                                         @endforeach
                                         </tbody>
                                     </table>
                                 </div>
                             </div>
-                            {{$votes->links()}}
+{{--                            {{$votes->links()}}--}}
                         </div>
                     </div>
                 </div>

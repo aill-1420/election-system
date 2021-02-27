@@ -12,7 +12,7 @@ class Election extends Model
 
     // votes
     public function votes() {
-        return $this->hasMany(Vote::class);
+        return $this->hasMany(Vote::class , 'election_id');
     }
 
     // status

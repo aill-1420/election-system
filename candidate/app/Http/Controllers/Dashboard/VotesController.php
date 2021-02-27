@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Dashboard;
 
 use App\Http\Controllers\Controller;
+use App\Models\Election;
 use App\Models\Vote;
 use Illuminate\Http\Request;
 
@@ -15,7 +16,7 @@ class VotesController extends Controller
      */
     public function index()
     {
-        $votes = Vote::orderBy('id' , 'DESC')->paginate($this->paginate);
+        $votes = Vote::orderBy('id' , 'DESC')->get();
         return view('dashboard.admin.votes.index' , compact('votes'));
     }
 
